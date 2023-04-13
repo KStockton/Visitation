@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  color: #ffffff;
+}
+
+:root {
+  --h1-font-size: 6.5rem;
+  --h2-font-size: 3.25rem;
+  --h3-font-size: 2.125rem;
+  --gap: 1rem;
+}
+
+body {
+  height: 100vh;
+  font-family: "Roboto Flex", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.welcome-section {
+  background-image: url("../../assets/pexels-pixabay-208745.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap);
+}
+
+button {
+  padding: 0.8em;
+  background: none;
+  color: #fff;
+  border: double 4px #000;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+button:active {
+  background-color: #85bb65;
+  transform: translateY(2px);
+}
+
+h1 h2,
+h3,
+h4 {
+  font-weight: var(--font-semi-bold);
+  margin: 0;
+}
+
+p {
+  color: #000;
+  margin-left: 1rem;
+}
+
+h1 {
+  font-family: "Zeyada", cursive;
+  font-size: var(--h1-font-size);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+h1::first-letter {
+  color: #000;
+}
+
+.second-word-title-letter {
+  color: #000;
+}
+
+.cities-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}

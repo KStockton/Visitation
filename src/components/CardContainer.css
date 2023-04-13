@@ -1,0 +1,10 @@
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(358px, 1fr));
+  gap: var(--gap);
+  margin: 1rem;
+}
+
+.no-results-message {
+  color: #000000;
+}

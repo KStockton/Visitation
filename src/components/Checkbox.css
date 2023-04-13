@@ -1,0 +1,14 @@
+label {
+  color: black;
+  margin-left: 0.3rem;
+  cursor: pointer;
+}
+
+label,
+input {
+  cursor: pointer;
+}
+
+#disable-checkbox {
+  pointer-events: none;
+}

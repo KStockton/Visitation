@@ -1,0 +1,19 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/Users/michaelking-stockton/.cache/firebase/emulators/firebase-database-emulator-v4.11.0.jar) to field sun.nio.ch.SelectorImpl.selectedKeys
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+15:05:45.753 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+15:05:46.052 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
+15:05:47.724 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - visitation-37a9b-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 494ms, init: 0ms
+15:05:57.375 [FirebaseWorkerPool-1-2] WARN com.firebase.core.persistence.backend.dummy.EmulatorMetadataPersistence - Multiple projectIds are not recommended in single project mode. Requested 
+namespace visitation-37a9b, but the emulator is configured for visitation-37a9b-default-rtdb. To 
+opt-out of single project mode add/set the single_project_mode: false property in 
+the firebase.json emulators config. 
+15:05:57.389 [NamespaceSystem-akka.actor.default-dispatcher-7] INFO com.firebase.core.namespace.NamespaceActor - visitation-37a9b successfully activated FBKV (SurveyIdle(0)) wait: 5ms, init: 0ms
+15:05:58.098 [NamespaceSystem-blocking-namespace-operation-dispatcher-11] INFO com.firebase.core.namespace.StateManager - Namespace visitation-37a9b-default-rtdb status Active to Active
+16:21:33.648 [Thread-0] INFO com.firebase.server.forge.App$ - Attempting graceful shutdown.
+16:21:33.672 [NamespaceSystem-akka.actor.default-dispatcher-82] INFO com.firebase.core.namespace.Terminator$Terminator - 2 actors left to terminate: visitation-37a9b-default-rtdb, visitation-37a9b
+16:21:33.682 [NamespaceSystem-akka.actor.default-dispatcher-89] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for visitation-37a9b
+16:21:33.682 [NamespaceSystem-akka.actor.default-dispatcher-99] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for visitation-37a9b-default-rtdb
+16:21:33.688 [Thread-0] INFO com.firebase.server.forge.App$ - Graceful shutdown complete.

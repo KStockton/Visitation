@@ -1,0 +1,15 @@
+.cities-wrapper {
+  display: flex;
+}
+
+.cities-wrapper h3 {
+  text-align: center;
+}
+
+.setting-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  justify-content: flex-end;
+  margin-right: 1rem;
+}

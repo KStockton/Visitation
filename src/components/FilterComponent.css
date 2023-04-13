@@ -1,0 +1,60 @@
+.filter-wrapper {
+  position: relative;
+  align-self: end;
+}
+
+.filter-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #000;
+}
+
+.filter-icon-filtered {
+  transform: rotate(0);
+  transition: all 0.2s linear;
+}
+
+.filter-icon-unfiltered {
+  transform: rotate(180deg);
+  transition: all 0.2s linear;
+}
+
+.icon {
+  vertical-align: middle;
+  margin: 0.2em;
+  fill: #000;
+}
+
+.close-icon {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+}
+
+.close-icon:hover {
+  transform: scale(1.1);
+}
+
+input {
+  color: #000;
+  padding-left: 1em;
+  font-size: 1rem;
+}
+
+.select {
+  position: absolute;
+  top: 49px;
+  z-index: 5;
+  width: 173px;
+  right: 0px;
+}
+
+.select > div {
+  color: black;
+}
+
+.select svg {
+  fill: #000000;
+}

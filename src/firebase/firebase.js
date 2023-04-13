@@ -1,18 +1,19 @@
 import { initializeApp } from "firebase/app";
-import { connectDatabaseEmulator, getDatabase } from "firebase/database";
-function defaultInitOptions() {
-  const firebaseConfig = {
-    // paste your config here!
-  };
+import { getDatabase } from "firebase/database";
 
-  const defaultProject = initializeApp(firebaseConfig);
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
+};
 
-  console.log(defaultProject.name);
+const defaultProject = initializeApp(firebaseConfig);
 
-  const db = getDatabase();
-  // If you want to use the local emulators, uncomment the line below (don't forget to comment it back out/remove when not using anymore!)
-  // connectDatabaseEmulator(db, "localhost", 9000);
-  return db;
-}
+console.log(defaultProject.name);
 
-export default defaultInitOptions();
+export const db = getDatabase(defaultProject);
