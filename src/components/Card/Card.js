@@ -1,10 +1,9 @@
-import React from "react";
+import React, { memo } from "react";
 import Toggle from "react-toggle";
 import "./Card.css";
-import "react-toggle/style.css"
+import "react-toggle/style.css";
 
 function Card({ city, onChangeVisited }) {
-
   return (
     <div className="card-wrapper">
       <div
@@ -30,4 +29,4 @@ function Card({ city, onChangeVisited }) {
   );
 }
 
-export default Card;
+export default memo(Card);

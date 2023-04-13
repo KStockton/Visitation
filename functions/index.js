@@ -18,21 +18,14 @@ admin.initializeApp({
 const db = admin.database();
 
 exports.setupServer = functions.https.onRequest((req, response) => {
-  response.set("Access-Control-Allow-Origin", "*");
-  response.set("Access-Control-Allow-Credentials", "true");
   cors(req, response, async () => {
     const cleanUrbanAreaList = (list) => {
       return list.slice(0, 30).map((city) => {
-        const hyphen = "-";
-        if (city.name.includes(",")) {
-          const splitCityName = city.name.split(",").join("");
-          city.name = splitCityName.replace(" ", hyphen);
-        }
-        if (city.name.includes(" ")) {
-          city.name = city.name.replace(" ", hyphen);
-        }
-        const lowerCaseCityName = city.name.toLowerCase();
-        return lowerCaseCityName;
+        const name = city.name
+          .replace(/,/g, "")
+          .replace(/\s+/g, "-")
+          .toLowerCase();
+        return name;
       });
     };
 
@@ -58,34 +51,34 @@ exports.setupServer = functions.https.onRequest((req, response) => {
     };
 
     try {
-      const urbanAreaListResponse = await axios.get(BASE_URL);
-      const urbanAreaList = cleanUrbanAreaList(
-        urbanAreaListResponse.data._links[URBAN_AREAS_KEY]
-      );
-      // seperated for readability
+      const { data } = await axios.get(BASE_URL);
+      const urbanAreaList = cleanUrbanAreaList(data._links[URBAN_AREAS_KEY]);
+
       const urbanAreaDataResponse = await Promise.all(
         urbanAreaList.map((city) => axios.get(`${BASE_URL}/slug:${city}/`))
       );
 
-      Promise.all(
+      const urbanAreaImagesResponse = await Promise.all(
         urbanAreaDataResponse.map((city) =>
           axios.get(`${BASE_URL}teleport:${city.data.ua_id}/images`)
         )
-      ).then((urbanAreaImagesResponse) => {
-        const combinedData = combineUrbanAreaData(
-          urbanAreaImagesResponse,
-          urbanAreaDataResponse
-        );
-        const ref = db.ref("cities/");
-        combinedData.forEach((city) => {
-          const cityRef = ref.child(`${city.id}`);
-          cityRef.set({ ...city, timestamp: new Date().toISOString() });
-        });
+      );
+
+      const combinedData = combineUrbanAreaData(
+        urbanAreaImagesResponse,
+        urbanAreaDataResponse
+      );
+
+      const citiesRef = db.ref("cities/");
+      combinedData.forEach((city) => {
+        const cityRef = citiesRef.child(`${city.id}`);
+        cityRef.set({ ...city, timestamp: new Date().toISOString() });
       });
+
       response.status(200).sendText("success");
-    } catch (err) {
-      if (err.response) {
-        const { status, statusText } = err.response;
+    } catch (error) {
+      if (error.response) {
+        const { status, statusText } = error.response;
         response.status(status).send(statusText);
       }
     }

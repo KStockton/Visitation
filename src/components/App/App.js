@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
-import Welcome from "./Welcome";
-import Cities from "./Cities";
-import { db } from "../firebase/firebase";
+import React, { useEffect, useRef, useState, memo } from "react";
+import Welcome from "../Welcome/Welcome";
+import Cities from "../Cities/Cities";
+import { db } from "../../firebase/firebase";
 import {
   ref,
   get,
@@ -36,23 +36,24 @@ function App() {
   };
 
   const handleApplyFilter = (name) => {
-    const searchBy = name === "visited" ? true : false;
+    const searchBy = name === "visited";
 
     const results = query(
       ref(db, "cities/"),
       orderByChild("visited"),
       equalTo(searchBy)
     );
-    get(results).then((snapshot) => {
-      const filteredData = [];
-      snapshot.forEach((snap) => {
-        if (snap.val()) {
-          filteredData.push(snap.val());
-        }
+    get(results)
+      .then(({ snapshots }) => {
+        const filteredData = snapshots
+          .filter((snapshot) => snapshot.exists())
+          .map((snapshot) => snapshot.val());
+        setIsLoading(false);
+        setCities(filteredData);
+      })
+      .catch((error) => {
+        console.error(error);
       });
-      setIsLoading(false);
-      setCities(filteredData);
-    });
   };
 
   const handleChangeVisited = async (id) => {
@@ -78,4 +79,4 @@ function App() {
   );
 }
 
-export default App;
+export default memo(App);

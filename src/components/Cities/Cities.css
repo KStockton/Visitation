@@ -1,13 +1,12 @@
-.cities-wrapper {
-  display: flex;
+.cities-container {
   margin-top: 5rem;
 }
 
-.cities-wrapper h3 {
+.cities-title {
   text-align: center;
 }
 
-.setting-wrapper {
+.cities-filters {
   display: flex;
   flex-direction: column;
   gap: var(--gap);

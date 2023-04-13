@@ -1,6 +1,7 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, memo } from "react";
 import Select from "react-select";
 import { BiFilter } from "react-icons/bi";
+import PropTypes from "prop-types";
 import "./FilterComponent.css";
 
 const options = [
@@ -8,7 +9,7 @@ const options = [
   { value: "visited", label: "Visited" },
 ];
 
-function FilterComponent({ filters, onApplyFilter }) {
+function FilterComponent({ onApplyFilter }) {
   const [showDropdown, setShowDropdown] = useState(false);
 
   const [selectedOption, setSelectedOption] = useState(null);
@@ -18,9 +19,9 @@ function FilterComponent({ filters, onApplyFilter }) {
   }, []);
 
   const handleSelectOptions = useCallback(
-    (e, b) => {
-      setSelectedOption(e, b);
-      onApplyFilter(e);
+    (option) => {
+      setSelectedOption(option);
+      onApplyFilter(option);
     },
     [onApplyFilter]
   );
@@ -32,8 +33,8 @@ function FilterComponent({ filters, onApplyFilter }) {
         Filter
       </button>
       {showDropdown && (
-        <div style={{ position: "relative" }}>
-          <div style={{ position: "absolute", right: 0, bottom: 0 }}>
+        <div className="select-container">
+          <div className="select-wrapper">
             <Select
               className="select"
               defaultValue={selectedOption}
@@ -49,15 +50,8 @@ function FilterComponent({ filters, onApplyFilter }) {
   );
 }
 
-export default FilterComponent;
-/* {filters.map((filter) => (
-              <li key={crypto.randomUUID()}>
-                <Checkbox
-                  checked={filter.isChecked}
-                  name={filter.name}
-                  label={filter.name}
-                  onChange={onSetFilters}
-                  isDisabled={filter.isDisabled}
-                />
-              </li>
-            ))} */
+FilterComponent.propTypes = {
+  onApplyFilter: PropTypes.func,
+};
+
+export default memo(FilterComponent);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 function NotFoud() {
   return (
@@ -8,4 +8,4 @@ function NotFoud() {
   );
 }
 
-export default NotFoud;
+export default memo(NotFoud);
