@@ -1,6 +1,4 @@
-/* eslint-disable comma-dangle */
-/* eslint-disable indent */
-/* eslint-disable object-curly-spacing */
+
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 const axios = require("axios");
@@ -52,6 +50,7 @@ exports.setupServer = functions.https.onRequest((req, response) => {
 
     try {
       const { data } = await axios.get(BASE_URL);
+      console.log("data", data);
       const urbanAreaList = cleanUrbanAreaList(data._links[URBAN_AREAS_KEY]);
 
       const urbanAreaDataResponse = await Promise.all(

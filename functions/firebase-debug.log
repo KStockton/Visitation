@@ -1,0 +1,314 @@
+[debug] [2023-04-13T05:45:14.120Z] ----------------------------------------------------------------------
+[debug] [2023-04-13T05:45:14.122Z] Command:       /Users/michaelking-stockton/.nvm/versions/node/v16.17.0/bin/node /Users/michaelking-stockton/.nvm/versions/node/v16.17.0/bin/firebase emulators:start --only functions
+[debug] [2023-04-13T05:45:14.123Z] CLI Version:   11.25.3
+[debug] [2023-04-13T05:45:14.123Z] Platform:      darwin
+[debug] [2023-04-13T05:45:14.123Z] Node Version:  v16.17.0
+[debug] [2023-04-13T05:45:14.125Z] Time:          Wed Apr 12 2023 23:45:14 GMT-0600 (Mountain Daylight Time)
+[debug] [2023-04-13T05:45:14.126Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-13T05:45:14.249Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-13T05:45:14.250Z] > authorizing via signed-in user (kingstockton@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2023-04-13T05:45:15.124Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-04-13T05:45:15.125Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-04-13T05:45:15.135Z] [hub] writing locator at /var/folders/w4/wh5y886x7f9945pchln6bl600000gn/T/hub-visitation-37a9b.json
+[debug] [2023-04-13T05:45:15.576Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-04-13T05:45:15.589Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
+[debug] [2023-04-13T05:45:15.597Z] defaultcredentials: writing to file /Users/michaelking-stockton/.config/firebase/kingstockton_gmail_com_application_default_credentials.json
+[debug] [2023-04-13T05:45:15.610Z] Setting GAC to /Users/michaelking-stockton/.config/firebase/kingstockton_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/michaelking-stockton/.config/firebase/kingstockton_gmail_com_application_default_credentials.json"}}
+[debug] [2023-04-13T05:45:15.611Z] > refreshing access token with scopes: []
+[debug] [2023-04-13T05:45:15.614Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-04-13T05:45:15.614Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-04-13T05:45:15.763Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-04-13T05:45:15.763Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-04-13T05:45:15.800Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/visitation-37a9b/adminSdkConfig [none]
+[debug] [2023-04-13T05:45:16.008Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/visitation-37a9b/adminSdkConfig 200
+[debug] [2023-04-13T05:45:16.009Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/visitation-37a9b/adminSdkConfig {"projectId":"visitation-37a9b","databaseURL":"https://visitation-37a9b-default-rtdb.firebaseio.com","storageBucket":"visitation-37a9b.appspot.com"}
+[debug] [2023-04-13T05:45:16.049Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-04-13T05:45:16.050Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-04-13T05:45:16.050Z] Starting Emulator UI with command {"binary":"node","args":["/Users/michaelking-stockton/.cache/firebase/emulators/ui-v1.11.5/server/server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/michaelking-stockton/.cache/firebase/emulators/ui-v1.11.5/server/server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2023-04-13T05:45:16.233Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2023-04-13T05:45:16.233Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions\" for Cloud Functions..."}}
+[debug] [2023-04-13T05:45:16.326Z] Validating nodejs source
+[debug] [2023-04-13T05:45:17.084Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.5",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-04-13T05:45:17.084Z] Building nodejs source
+[debug] [2023-04-13T05:45:17.085Z] Failed to find version of module node: reached end of search path /Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules
+[info] ✔  functions: Using node@16 from host. 
+[debug] [2023-04-13T05:45:17.089Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-04-13T05:45:17.100Z] Found firebase-functions binary at '/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules/.bin/firebase-functions'
+[debug] [2023-04-13T05:45:17.421Z] Serving at port 8710
+
+[debug] [2023-04-13T05:45:18.030Z] Got response from /__/functions.yaml {"endpoints":{"setupServer":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"setupServer"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-04-13T05:45:18.038Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: setupServer. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: setupServer."}}
+[info] ✔  functions[us-central1-setupServer]: http function initialized (http://127.0.0.1:5001/visitation-37a9b/us-central1/setupServer). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/visitation-37a9b/us-central1/setupServer)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2023-04-13T05:46:01.948Z] [work-queue] {"queuedWork":["/visitation-37a9b/us-central1/setupServer-2023-04-13T05:46:01.948Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-13T05:46:01.949Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/visitation-37a9b/us-central1/setupServer-2023-04-13T05:46:01.948Z"],"workRunningCount":1}
+[debug] [2023-04-13T05:46:01.949Z] Accepted request GET /visitation-37a9b/us-central1/setupServer --> us-central1-setupServer
+[debug] [2023-04-13T05:46:01.954Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-04-13T05:46:01.954Z] [functions] Got req.url=/visitation-37a9b/us-central1/setupServer, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/visitation-37a9b/us-central1/setupServer, mapping to path=/"}}
+[debug] [2023-04-13T05:46:01.965Z] [worker-pool] addWorker(us-central1-setupServer) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-setupServer)"}}
+[debug] [2023-04-13T05:46:01.968Z] [worker-pool] Adding worker with key us-central1-setupServer, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-setupServer, total=1"}}
+[debug] [2023-04-13T05:46:03.805Z] [runtime-status] [56210] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.6.0","resolution":"/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"[runtime-status] [56210] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.6.0\",\"resolution\":\"/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-04-13T05:46:03.806Z] [runtime-status] [56210] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.2.1","resolution":"/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"[runtime-status] [56210] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.2.1\",\"resolution\":\"/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-04-13T05:46:03.806Z] [runtime-status] [56210] Found local functions config: /Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/.runtimeconfig.json {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"[runtime-status] [56210] Found local functions config: /Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/.runtimeconfig.json"}}
+[debug] [2023-04-13T05:46:03.809Z] [runtime-status] [56210] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"[runtime-status] [56210] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-04-13T05:46:03.810Z] [runtime-status] [56210] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.2.1","resolution":"/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"[runtime-status] [56210] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.2.1\",\"resolution\":\"/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-04-13T05:46:04.189Z] [runtime-status] [56210] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"[runtime-status] [56210] Checked functions.config() {\"config\":{}}"}}
+[debug] [2023-04-13T05:46:04.189Z] [runtime-status] [56210] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.2.1","resolution":"/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"[runtime-status] [56210] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.2.1\",\"resolution\":\"/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2023-04-13T05:46:04.190Z] [runtime-status] [56210] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.2.1","resolution":"/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"[runtime-status] [56210] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.2.1\",\"resolution\":\"/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-04-13T05:46:04.192Z] [runtime-status] [56210] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.6.0","resolution":"/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"[runtime-status] [56210] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.6.0\",\"resolution\":\"/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2023-04-13T05:46:04.195Z] [runtime-status] [56210] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.2.1","resolution":"/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"[runtime-status] [56210] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.2.1\",\"resolution\":\"/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2023-04-13T05:46:04.195Z] [runtime-status] [56210] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.6.0","resolution":"/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"[runtime-status] [56210] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.6.0\",\"resolution\":\"/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2023-04-13T05:46:04.278Z] [runtime-status] [56210] initializeApp(DEFAULT) {"credential":{"implicit":false,"projectId":"visitation-37a9b","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC75k6R9LHAIa+4\n7krGB+guH8/37OyUBHsAs0bwWTtrtk9QqU5a9JQgMV4hvTskhcwccMNrUpy2FvF0\nW2JeMesSvP/HWV8rpTh2YAFu02n2tqpPjAL9hSTERtbW8pS6oUZPS4+J0EKojJAn\nqW+Tu1Owhhwf+3tReyGn4MSctJ1UhePEPBp0v4ZErku4Z2rUKdhyZyP+8DHrlDlN\n1toWZrOYQN6AkNENS3tbKVCYEzgtfDXpBfp6QyWwTaA26c2Mq5/Csz9EoTLpRFXv\njYqAPx7cRXyyY9Cj/w5lqmO39EghhKqHLVLywSTtf+BBgLsN+N2Ns11Kootmz7Jv\nSooE2teXAgMBAAECggEABL5U8QxWBPTQe/h6uH9fRRYFLSnXBT3ZDEoT74Qt+C0D\n2VALziU3tSZ6983hWb6esE0dhypoAOohoN1b3Pg61w7+h+iuaaZBzFAIA+Vb42R+\n3Nk64UuxYTAtKXsPMgHiAWD+Wg9v8X5IRAXtERpr4QtJJHqeUgZWnHACyMeQ4578\nV6DG7CO2wNytJg9TcIAp0F3HqFCKXKtUAWuXS5dBs6yGLIvhSO4QuDCeO3aB3FzK\nG95ACjs+kHH2+mqrQIOa9mAP9os+DZQHIdgEN0PYFGnuoZ4k5NvtrhEJJ8VDZr7n\nIcKB8C44bRgKK+ex2P3oLYo1qkEUuhrQfNm1jB1PCQKBgQD/HvmhLhhgnBWo1U9W\nGgwR9Kf6EkD7e0xBw/nxXRRGKAkG59g9QBlnba7v4hXJ1ae9dFIxls7GzSiSIHZX\nT/jb0EHVMOms7BpFcIwq1VBOFrSP1kl2RbwcUA7z2BZI/i2R+VB4Vb7QRsSu9piO\nFEDnhy/IQGt0cy4ZxDLqlhY/YwKBgQC8jApYKnHXwnPewgLQzjsqyhpj9I4zlGcD\n73iif60Q22mzLqYJGQBulQWaT3vZXbO300/p8oh567Js68oCOKAH6z/RDkefCCNH\nxrIe55bP6Bcc2vOPSUlfDueiYNQrmLRLe4FcYQ0r1fSrtx3gD1jQwjJBApxW28Us\n/CmP0lhfPQKBgQDOu9gHn6XLa9A1bx2KJTNQvZP9FhuobgKebGO3Dfkm3Lxr5yYY\nhD/Ry1TuOKP1WXhDEuakHpPTD17oAvxCxqBf58PhMXC6WtzzFj/PWepoTQfmYvxG\npj3IJ6vmN13fqnFdD84ApWMpvZ8WNOfsgkcSFz9GI8WvqMJbyNyFsje3BwKBgQCD\nBDzb7wKUjwa9L8uNFQGARlf4RSPbK7A5x9nn8RhtsknMvQmbIMhwDxWJmNnSvY34\nmtnZEzNKpUGi9mW1DWwGlK4PswCJvbnmUmfLmdnuNrR41JySYLafW1gSOX61nLMM\nEJJfgwEICPCvsdsMqx1oUslg61N/988X51FqIxxNcQKBgQC4lgZJ22vgn4+gLGZl\npLhDnGsnAV1+YVCiOmCqd6rG9Ryzg0Dh6dUCgV5LYG3982itpJ73oSEfIFIeWf5V\nMmRyduWwZabjnvCzY7zT9RJ53P2qiCP8qfDLkHU8AADi6L8lR0ftMVHcCLfEkFrx\nNodMuzwh0QHToJE/pOH6cdhGDQ==\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-lfgk4@visitation-37a9b.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}},"databaseURL":"https://visitation-37a9b-default-rtdb.firebaseio.com"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"[runtime-status] [56210] initializeApp(DEFAULT) {\"credential\":{\"implicit\":false,\"projectId\":\"visitation-37a9b\",\"privateKey\":\"-----BEGIN PRIVATE KEY-----\\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC75k6R9LHAIa+4\\n7krGB+guH8/37OyUBHsAs0bwWTtrtk9QqU5a9JQgMV4hvTskhcwccMNrUpy2FvF0\\nW2JeMesSvP/HWV8rpTh2YAFu02n2tqpPjAL9hSTERtbW8pS6oUZPS4+J0EKojJAn\\nqW+Tu1Owhhwf+3tReyGn4MSctJ1UhePEPBp0v4ZErku4Z2rUKdhyZyP+8DHrlDlN\\n1toWZrOYQN6AkNENS3tbKVCYEzgtfDXpBfp6QyWwTaA26c2Mq5/Csz9EoTLpRFXv\\njYqAPx7cRXyyY9Cj/w5lqmO39EghhKqHLVLywSTtf+BBgLsN+N2Ns11Kootmz7Jv\\nSooE2teXAgMBAAECggEABL5U8QxWBPTQe/h6uH9fRRYFLSnXBT3ZDEoT74Qt+C0D\\n2VALziU3tSZ6983hWb6esE0dhypoAOohoN1b3Pg61w7+h+iuaaZBzFAIA+Vb42R+\\n3Nk64UuxYTAtKXsPMgHiAWD+Wg9v8X5IRAXtERpr4QtJJHqeUgZWnHACyMeQ4578\\nV6DG7CO2wNytJg9TcIAp0F3HqFCKXKtUAWuXS5dBs6yGLIvhSO4QuDCeO3aB3FzK\\nG95ACjs+kHH2+mqrQIOa9mAP9os+DZQHIdgEN0PYFGnuoZ4k5NvtrhEJJ8VDZr7n\\nIcKB8C44bRgKK+ex2P3oLYo1qkEUuhrQfNm1jB1PCQKBgQD/HvmhLhhgnBWo1U9W\\nGgwR9Kf6EkD7e0xBw/nxXRRGKAkG59g9QBlnba7v4hXJ1ae9dFIxls7GzSiSIHZX\\nT/jb0EHVMOms7BpFcIwq1VBOFrSP1kl2RbwcUA7z2BZI/i2R+VB4Vb7QRsSu9piO\\nFEDnhy/IQGt0cy4ZxDLqlhY/YwKBgQC8jApYKnHXwnPewgLQzjsqyhpj9I4zlGcD\\n73iif60Q22mzLqYJGQBulQWaT3vZXbO300/p8oh567Js68oCOKAH6z/RDkefCCNH\\nxrIe55bP6Bcc2vOPSUlfDueiYNQrmLRLe4FcYQ0r1fSrtx3gD1jQwjJBApxW28Us\\n/CmP0lhfPQKBgQDOu9gHn6XLa9A1bx2KJTNQvZP9FhuobgKebGO3Dfkm3Lxr5yYY\\nhD/Ry1TuOKP1WXhDEuakHpPTD17oAvxCxqBf58PhMXC6WtzzFj/PWepoTQfmYvxG\\npj3IJ6vmN13fqnFdD84ApWMpvZ8WNOfsgkcSFz9GI8WvqMJbyNyFsje3BwKBgQCD\\nBDzb7wKUjwa9L8uNFQGARlf4RSPbK7A5x9nn8RhtsknMvQmbIMhwDxWJmNnSvY34\\nmtnZEzNKpUGi9mW1DWwGlK4PswCJvbnmUmfLmdnuNrR41JySYLafW1gSOX61nLMM\\nEJJfgwEICPCvsdsMqx1oUslg61N/988X51FqIxxNcQKBgQC4lgZJ22vgn4+gLGZl\\npLhDnGsnAV1+YVCiOmCqd6rG9Ryzg0Dh6dUCgV5LYG3982itpJ73oSEfIFIeWf5V\\nMmRyduWwZabjnvCzY7zT9RJ53P2qiCP8qfDLkHU8AADi6L8lR0ftMVHcCLfEkFrx\\nNodMuzwh0QHToJE/pOH6cdhGDQ==\\n-----END PRIVATE KEY-----\\n\",\"clientEmail\":\"firebase-adminsdk-lfgk4@visitation-37a9b.iam.gserviceaccount.com\",\"httpClient\":{\"retry\":{\"maxRetries\":4,\"statusCodes\":[503],\"ioErrorCodes\":[\"ECONNRESET\",\"ETIMEDOUT\"],\"backOffFactor\":0.5,\"maxDelayInMillis\":60000}}},\"databaseURL\":\"https://visitation-37a9b-default-rtdb.firebaseio.com\"}"}}
+[warn] ⚠  functions: The Realtime Database emulator is not running, so calls to Realtime Database will affect production. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"The Realtime Database emulator is not running, so calls to Realtime Database will affect production."}}
+[debug] [2023-04-13T05:46:04.289Z] [runtime-status] [56210] Functions runtime initialized. {"cwd":"/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions","node_version":"16.17.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"[runtime-status] [56210] Functions runtime initialized. {\"cwd\":\"/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions\",\"node_version\":\"16.17.0\"}"}}
+[debug] [2023-04-13T05:46:04.289Z] [runtime-status] [56210] Listening to port: /var/folders/w4/wh5y886x7f9945pchln6bl600000gn/T/fire_emu_19d220d150fea92a.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"[runtime-status] [56210] Listening to port: /var/folders/w4/wh5y886x7f9945pchln6bl600000gn/T/fire_emu_19d220d150fea92a.sock"}}
+[debug] [2023-04-13T05:46:04.314Z] [worker-us-central1-setupServer-e454226a-3641-4cfc-945f-97c4fcd57552]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"[worker-us-central1-setupServer-e454226a-3641-4cfc-945f-97c4fcd57552]: IDLE"}}
+[debug] [2023-04-13T05:46:04.315Z] [worker-pool] submitRequest(triggerId=us-central1-setupServer) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-setupServer)"}}
+[info] i  functions: Beginning execution of "us-central1-setupServer" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"Beginning execution of \"us-central1-setupServer\""}}
+[debug] [2023-04-13T05:46:04.316Z] [worker-us-central1-setupServer-e454226a-3641-4cfc-945f-97c4fcd57552]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"[worker-us-central1-setupServer-e454226a-3641-4cfc-945f-97c4fcd57552]: BUSY"}}
+[info] >  data { {"user":"data {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m data {"}}
+[info] >    _links: { {"user":"  _links: {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m   _links: {"}}
+[info] >      curies: [ [Object], [Object], [Object], [Object], [Object], [Object] ], {"user":"    curies: [ [Object], [Object], [Object], [Object], [Object], [Object] ],","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m     curies: [ [Object], [Object], [Object], [Object], [Object], [Object] ],"}}
+[info] >      self: { href: 'https://api.teleport.org/api/urban_areas/' }, {"user":"    self: { href: 'https://api.teleport.org/api/urban_areas/' },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m     self: { href: 'https://api.teleport.org/api/urban_areas/' },"}}
+[info] >      'ua:item': [ {"user":"    'ua:item': [","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m     'ua:item': ["}}
+[info] >        [Object], [Object], [Object], [Object], [Object], [Object], {"user":"      [Object], [Object], [Object], [Object], [Object], [Object],","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m       [Object], [Object], [Object], [Object], [Object], [Object],"}}
+[info] >        [Object], [Object], [Object], [Object], [Object], [Object], {"user":"      [Object], [Object], [Object], [Object], [Object], [Object],","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m       [Object], [Object], [Object], [Object], [Object], [Object],"}}
+[info] >        [Object], [Object], [Object], [Object], [Object], [Object], {"user":"      [Object], [Object], [Object], [Object], [Object], [Object],","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m       [Object], [Object], [Object], [Object], [Object], [Object],"}}
+[info] >        [Object], [Object], [Object], [Object], [Object], [Object], {"user":"      [Object], [Object], [Object], [Object], [Object], [Object],","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m       [Object], [Object], [Object], [Object], [Object], [Object],"}}
+[info] >        [Object], [Object], [Object], [Object], [Object], [Object], {"user":"      [Object], [Object], [Object], [Object], [Object], [Object],","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m       [Object], [Object], [Object], [Object], [Object], [Object],"}}
+[info] >        [Object], [Object], [Object], [Object], [Object], [Object], {"user":"      [Object], [Object], [Object], [Object], [Object], [Object],","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m       [Object], [Object], [Object], [Object], [Object], [Object],"}}
+[info] >        [Object], [Object], [Object], [Object], [Object], [Object], {"user":"      [Object], [Object], [Object], [Object], [Object], [Object],","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m       [Object], [Object], [Object], [Object], [Object], [Object],"}}
+[info] >        [Object], [Object], [Object], [Object], [Object], [Object], {"user":"      [Object], [Object], [Object], [Object], [Object], [Object],","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m       [Object], [Object], [Object], [Object], [Object], [Object],"}}
+[info] >        [Object], [Object], [Object], [Object], [Object], [Object], {"user":"      [Object], [Object], [Object], [Object], [Object], [Object],","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m       [Object], [Object], [Object], [Object], [Object], [Object],"}}
+[info] >        [Object], [Object], [Object], [Object], [Object], [Object], {"user":"      [Object], [Object], [Object], [Object], [Object], [Object],","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m       [Object], [Object], [Object], [Object], [Object], [Object],"}}
+[info] >        [Object], [Object], [Object], [Object], [Object], [Object], {"user":"      [Object], [Object], [Object], [Object], [Object], [Object],","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m       [Object], [Object], [Object], [Object], [Object], [Object],"}}
+[info] >        [Object], [Object], [Object], [Object], [Object], [Object], {"user":"      [Object], [Object], [Object], [Object], [Object], [Object],","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m       [Object], [Object], [Object], [Object], [Object], [Object],"}}
+[info] >        [Object], [Object], [Object], [Object], [Object], [Object], {"user":"      [Object], [Object], [Object], [Object], [Object], [Object],","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m       [Object], [Object], [Object], [Object], [Object], [Object],"}}
+[info] >        [Object], [Object], [Object], [Object], [Object], [Object], {"user":"      [Object], [Object], [Object], [Object], [Object], [Object],","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m       [Object], [Object], [Object], [Object], [Object], [Object],"}}
+[info] >        [Object], [Object], [Object], [Object], [Object], [Object], {"user":"      [Object], [Object], [Object], [Object], [Object], [Object],","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m       [Object], [Object], [Object], [Object], [Object], [Object],"}}
+[info] >        [Object], [Object], [Object], [Object], [Object], [Object], {"user":"      [Object], [Object], [Object], [Object], [Object], [Object],","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m       [Object], [Object], [Object], [Object], [Object], [Object],"}}
+[info] >        [Object], [Object], [Object], [Object], {"user":"      [Object], [Object], [Object], [Object],","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m       [Object], [Object], [Object], [Object],"}}
+[info] >        ... 166 more items {"user":"      ... 166 more items","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m       ... 166 more items"}}
+[info] >      ] {"user":"    ]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m     ]"}}
+[info] >    }, {"user":"  },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m   },"}}
+[info] >    count: 266 {"user":"  count: 266","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m   count: 266"}}
+[info] >  } {"user":"}","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"\u001b[90m> \u001b[39m }"}}
+[debug] [2023-04-13T05:46:32.637Z] File /Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/index.js changed, reloading triggers"}}
+[debug] [2023-04-13T05:46:33.644Z] Validating nodejs source
+[debug] [2023-04-13T05:46:34.621Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.5",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-04-13T05:46:34.621Z] Building nodejs source
+[debug] [2023-04-13T05:46:34.621Z] Failed to find version of module node: reached end of search path /Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules
+[info] ✔  functions: Using node@16 from host. 
+[debug] [2023-04-13T05:46:34.623Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-04-13T05:46:34.625Z] Found firebase-functions binary at '/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules/.bin/firebase-functions'
+[debug] [2023-04-13T05:46:34.950Z] Serving at port 8950
+
+[debug] [2023-04-13T05:46:35.276Z] File /Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/index.js changed, reloading triggers"}}
+[debug] [2023-04-13T05:46:35.644Z] Got response from /__/functions.yaml {"endpoints":{"setupServer":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"setupServer"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-04-13T05:46:35.650Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: setupServer. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: setupServer."}}
+[debug] [2023-04-13T05:46:35.659Z] [worker-pool] Marking BUSY worker to finish (us-central1-setupServer) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Marking BUSY worker to finish (us-central1-setupServer)"}}
+[debug] [2023-04-13T05:46:35.659Z] [worker-us-central1-setupServer-e454226a-3641-4cfc-945f-97c4fcd57552]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"[worker-us-central1-setupServer-e454226a-3641-4cfc-945f-97c4fcd57552]: FINISHING"}}
+[debug] [2023-04-13T05:46:36.277Z] Validating nodejs source
+[debug] [2023-04-13T05:46:36.959Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.5",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-04-13T05:46:36.960Z] Building nodejs source
+[debug] [2023-04-13T05:46:36.960Z] Failed to find version of module node: reached end of search path /Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules
+[info] ✔  functions: Using node@16 from host. 
+[debug] [2023-04-13T05:46:36.962Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-04-13T05:46:36.968Z] Found firebase-functions binary at '/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules/.bin/firebase-functions'
+[debug] [2023-04-13T05:46:37.221Z] Serving at port 8861
+
+[debug] [2023-04-13T05:46:37.502Z] Got response from /__/functions.yaml {"endpoints":{"setupServer":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"setupServer"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-04-13T05:46:37.507Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: setupServer. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: setupServer."}}
+[error] i  Your function timed out after ~60s. To configure this timeout, see
+      https://firebase.google.com/docs/functions/manage-functions#set_timeout_and_memory_allocation. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"Your function timed out after ~60s. To configure this timeout, see\n      https://firebase.google.com/docs/functions/manage-functions#set_timeout_and_memory_allocation."}}
+[error] i  Request to function failed: Error: socket hang up {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"Request to function failed: Error: socket hang up"}}
+[debug] [2023-04-13T05:48:58.404Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-04-13T05:48:58.408Z] [worker-us-central1-setupServer-e454226a-3641-4cfc-945f-97c4fcd57552]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"[worker-us-central1-setupServer-e454226a-3641-4cfc-945f-97c4fcd57552]: exited"}}
+[debug] [2023-04-13T05:48:58.409Z] [worker-us-central1-setupServer-e454226a-3641-4cfc-945f-97c4fcd57552]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-setupServer"},"extension":{},"message":"[worker-us-central1-setupServer-e454226a-3641-4cfc-945f-97c4fcd57552]: FINISHED"}}
+[debug] [2023-04-13T05:49:02.972Z] File /Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/index.js changed, reloading triggers"}}
+[debug] [2023-04-13T05:49:03.974Z] Validating nodejs source
+[debug] [2023-04-13T05:49:04.704Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.5",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-04-13T05:49:04.705Z] Building nodejs source
+[debug] [2023-04-13T05:49:04.705Z] Failed to find version of module node: reached end of search path /Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules
+[info] ✔  functions: Using node@16 from host. 
+[debug] [2023-04-13T05:49:04.706Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-04-13T05:49:04.708Z] Found firebase-functions binary at '/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules/.bin/firebase-functions'
+[debug] [2023-04-13T05:49:05.024Z] Serving at port 8954
+
+[debug] [2023-04-13T05:49:05.308Z] Got response from /__/functions.yaml {"endpoints":{"setupServer":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"setupServer"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-04-13T05:49:05.314Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: setupServer. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: setupServer."}}
+[debug] [2023-04-13T05:49:06.706Z] File /Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/index.js changed, reloading triggers"}}
+[debug] [2023-04-13T05:49:06.807Z] File /Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/index.js changed, reloading triggers"}}
+[debug] [2023-04-13T05:49:07.809Z] Validating nodejs source
+[debug] [2023-04-13T05:49:08.471Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.5",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-04-13T05:49:08.472Z] Building nodejs source
+[debug] [2023-04-13T05:49:08.472Z] Failed to find version of module node: reached end of search path /Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules
+[info] ✔  functions: Using node@16 from host. 
+[debug] [2023-04-13T05:49:08.473Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-04-13T05:49:08.475Z] Found firebase-functions binary at '/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules/.bin/firebase-functions'
+[debug] [2023-04-13T05:49:08.713Z] Serving at port 8212
+
+[debug] [2023-04-13T05:49:09.081Z] Got response from /__/functions.yaml {"endpoints":{"setupServer":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"setupServer"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-04-13T05:49:09.087Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: setupServer. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: setupServer."}}
