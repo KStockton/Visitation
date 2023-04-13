@@ -6,7 +6,9 @@ import ReactLoading from "react-loading";
 const CardContainer = ({ cities, isLoading, onChangeVisited }) => {
   if (isLoading) {
     return (
-      <ReactLoading type={"bars"} color={"#000"} height={667} width={375} />
+      <div className="react-loading-wrapper">
+        <ReactLoading type={"bars"} color={"#000"} height={667} width={375} />
+      </div>
     );
   }
 

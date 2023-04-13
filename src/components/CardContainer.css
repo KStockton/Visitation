@@ -8,3 +8,7 @@
 .no-results-message {
   color: #000000;
 }
+
+.react-loading-wrapper {
+  margin: auto;
+}

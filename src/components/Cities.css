@@ -1,5 +1,6 @@
 .cities-wrapper {
   display: flex;
+  margin-top: 5rem;
 }
 
 .cities-wrapper h3 {
@@ -12,4 +13,9 @@
   gap: var(--gap);
   justify-content: flex-end;
   margin-right: 1rem;
+}
+
+
+.dest-title {
+  color: #000;
 }

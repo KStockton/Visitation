@@ -14,6 +14,4 @@ const firebaseConfig = {
 
 const defaultProject = initializeApp(firebaseConfig);
 
-console.log(defaultProject.name);
-
 export const db = getDatabase(defaultProject);

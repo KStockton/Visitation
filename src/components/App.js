@@ -13,19 +13,14 @@ import {
 } from "firebase/database";
 import "./App.css";
 
-const filterInitState = [
-  { name: "visited", isChecked: false, isDisabled: false },
-  { name: "visit", isChecked: false, isDisabled: true },
-];
-
 function App() {
   const [cities, setCities] = useState(null);
-  const [filters, setFilters] = useState(filterInitState);
   const [isLoading, setIsLoading] = useState(true);
 
   const citiesRef = useRef(null);
 
   useEffect(() => {
+    setIsLoading(true);
     onValue(ref(db), (snapshot) => {
       const data = snapshot.val();
       if (data !== null) {
@@ -35,22 +30,6 @@ function App() {
     });
     setIsLoading(false);
   }, []);
-
-  const handleFilterCheckbox = (event) => {
-    const { name, checked } = event.target;
-
-    const olfFilters = filters;
-    const newFilters = olfFilters.map((item, index) => {
-      if (name === item.name) {
-        item.isChecked = checked;
-        item.isDisabled = !item.isDisabled;
-      } else {
-        item.isDisabled = !item.isDisabled;
-      }
-      return item;
-    });
-    setFilters(newFilters);
-  };
 
   const handleGetStarted = () => {
     citiesRef?.current.scrollIntoView({ behavior: "smooth" });
@@ -79,16 +58,8 @@ function App() {
   const handleChangeVisited = async (id) => {
     const oldCityData = cities;
     const foundCity = oldCityData.find((city) => city.id === id);
-
     const updatedCity = { ...foundCity, visited: !foundCity.visited };
-
     await set(ref(db, "cities/" + id), { ...updatedCity });
-    const cityUpdateRef = ref(db, "cities/" + id);
-
-    onValue(cityUpdateRef, (snapshot) => {
-      const data = snapshot.val();
-      console.log(data);
-    });
   };
 
   return (
@@ -98,8 +69,6 @@ function App() {
         <Cities
           ref={citiesRef}
           cities={cities}
-          onFilterData={handleFilterCheckbox}
-          filters={filters}
           onApplyFilter={handleApplyFilter}
           isLoading={isLoading}
           onChangeVisited={handleChangeVisited}
