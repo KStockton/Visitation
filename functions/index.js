@@ -50,7 +50,7 @@ exports.setupServer = functions.https.onRequest((req, response) => {
 
     try {
       const { data } = await axios.get(BASE_URL);
-      console.log("data", data);
+  
       const urbanAreaList = cleanUrbanAreaList(data._links[URBAN_AREAS_KEY]);
 
       const urbanAreaDataResponse = await Promise.all(
