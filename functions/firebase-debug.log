@@ -3400,3 +3400,76 @@ Issues? Report them at https://github.com/firebase/firebase-tools/issues and att
     at DerivedLogger.emit (node:domain:489:12)
     at addChunk (/Users/michaelking-stockton/.nvm/versions/node/v16.17.0/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:298:12)
 [error] 
+[debug] [2023-05-18T00:58:54.563Z] ----------------------------------------------------------------------
+[debug] [2023-05-18T00:58:54.566Z] Command:       /Users/michaelking-stockton/.nvm/versions/node/v16.17.0/bin/node /Users/michaelking-stockton/.nvm/versions/node/v16.17.0/bin/firebase functions:shell
+[debug] [2023-05-18T00:58:54.566Z] CLI Version:   11.25.3
+[debug] [2023-05-18T00:58:54.566Z] Platform:      darwin
+[debug] [2023-05-18T00:58:54.566Z] Node Version:  v16.17.0
+[debug] [2023-05-18T00:58:54.574Z] Time:          Wed May 17 2023 18:58:54 GMT-0600 (Mountain Daylight Time)
+[debug] [2023-05-18T00:58:54.575Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-18T00:58:54.579Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-05-18T00:58:54.668Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-18T00:58:54.668Z] > authorizing via signed-in user (kingstockton@gmail.com)
+[debug] [2023-05-18T00:58:54.668Z] [iam] checking project visitation-37a9b for permissions ["firebase.projects.get"]
+[debug] [2023-05-18T00:58:54.669Z] > refreshing access token with scopes: []
+[debug] [2023-05-18T00:58:54.670Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-05-18T00:58:54.670Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-05-18T00:58:54.731Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-05-18T00:58:54.731Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-05-18T00:58:54.865Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-05-18T00:58:54.865Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-05-18T00:58:54.899Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/visitation-37a9b:testIamPermissions [none]
+[debug] [2023-05-18T00:58:54.899Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/visitation-37a9b:testIamPermissions x-goog-quota-user=projects/visitation-37a9b
+[debug] [2023-05-18T00:58:54.899Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/visitation-37a9b:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-05-18T00:58:55.102Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/visitation-37a9b:testIamPermissions 200
+[debug] [2023-05-18T00:58:55.102Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/visitation-37a9b:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-05-18T00:58:55.267Z] defaultcredentials: writing to file /Users/michaelking-stockton/.config/firebase/kingstockton_gmail_com_application_default_credentials.json
+[debug] [2023-05-18T00:58:55.271Z] DEBUG: Setting GAC to /Users/michaelking-stockton/.config/firebase/kingstockton_gmail_com_application_default_credentials.json
+[debug] [2023-05-18T00:58:55.272Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/visitation-37a9b/adminSdkConfig [none]
+[debug] [2023-05-18T00:58:55.496Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/visitation-37a9b/adminSdkConfig 200
+[debug] [2023-05-18T00:58:55.496Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/visitation-37a9b/adminSdkConfig {"projectId":"visitation-37a9b","databaseURL":"https://visitation-37a9b-default-rtdb.firebaseio.com","storageBucket":"visitation-37a9b.appspot.com"}
+[debug] [2023-05-18T00:58:55.520Z] [functions] Watching "/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions" for Cloud Functions...
+[debug] [2023-05-18T00:58:55.528Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2023-05-18T00:58:56.127Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.3.5",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-05-18T00:58:56.128Z] Building nodejs source
+[debug] [2023-05-18T00:58:56.128Z] Failed to find version of module node: reached end of search path /Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules
+[info] ✔  functions: Using node@16 from host. 
+[debug] [2023-05-18T00:58:56.132Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-18T00:58:56.144Z] Found firebase-functions binary at '/Users/michaelking-stockton/Programming/takehomeassement/abode-takehome/functions/node_modules/.bin/firebase-functions'
+[debug] [2023-05-18T00:58:56.489Z] Serving at port 8422
+
+[debug] [2023-05-18T00:58:57.214Z] Got response from /__/functions.yaml {"endpoints":{"setupServer":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"setupServer"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-18T00:58:57.220Z] shutdown requested via /__/quitquitquit
+
+[debug] [2023-05-18T00:58:57.238Z] [functions] Loaded functions definitions from source: setupServer.
+[debug] [2023-05-18T00:58:57.239Z] [functions[us-central1-setupServer]] http function initialized (http://127.0.0.1:5001/visitation-37a9b/us-central1/setupServer).
+[info] i  functions: Loaded functions: setupServer 
+[warn] ⚠  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc 

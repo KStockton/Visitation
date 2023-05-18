@@ -43,16 +43,17 @@ function App() {
       orderByChild("visited"),
       equalTo(searchBy)
     );
-    get(results).then((snapshot) => {
-      const filteredData = [];
-      snapshot.forEach((snap) => {
-        if (snap.val()) {
-          filteredData.push(snap.val());
-        }
-      });
-      setIsLoading(false);
-      setCities(filteredData);
-    })
+    get(results)
+      .then((snapshot) => {
+        const filteredData = [];
+        snapshot.forEach((snap) => {
+          if (snap.val()) {
+            filteredData.push(snap.val());
+          }
+        });
+        setIsLoading(false);
+        setCities(filteredData);
+      })
       .catch((error) => {
         console.error(error);
       });

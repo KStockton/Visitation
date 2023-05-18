@@ -24,9 +24,12 @@ A user can mark a site as visted or nonvisited.
 They can also filter the visted sites
 
 
-## Example UI
+## Wireframe
 
 ![example-ui](https://user-images.githubusercontent.com/16907570/230651777-d8a3c3f5-be4b-4c4d-8b70-0c941a9e00a7.png)
+
+## Image
+![Screenshot 2023-05-17 at 7 09 22 PM](https://github.com/KStockton/Visitation/assets/34406483/4c7c4c84-a67b-4213-86fe-cfd567a0875f)
 
 ## Tech 
 
